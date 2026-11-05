@@ -4,8 +4,6 @@ import { ArrowRight, Download, Sparkle } from './Icons'
 
 // Hero banner: LEFT image, RIGHT content.
 export default function Banner() {
-  const initials = profile.name.split(' ').map((w) => w[0]).slice(0, 2).join('').toUpperCase()
-
   return (
     <section className="hero">
       <div className="container">
@@ -14,9 +12,7 @@ export default function Banner() {
           <div className="hero-media reveal in">
             <div className="hero-figure">
               <div className="hero-photo">
-                {/* Drop your photo at public/profile.jpg and swap the block below:
-                    <img src="/profile.jpg" alt={profile.name} /> */}
-                <span className="placeholder">{initials || 'YN'}</span>
+                <img src="/profile.jpg" alt={profile.name} />
               </div>
               <div className="hero-float">
                 <span className="ico"><Sparkle width={20} height={20} /></span>
