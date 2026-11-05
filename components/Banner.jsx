@@ -26,7 +26,6 @@ export default function Banner() {
 
           {/* RIGHT — content */}
           <div className="hero-copy">
-            <span className="hero-badge"><span className="dot" /> Available for opportunities</span>
             <h1 className="hero-title">
               Hi, I'm <span className="gradient-text">{profile.name}</span>
             </h1>
