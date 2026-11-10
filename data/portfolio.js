@@ -30,6 +30,10 @@ export const profile = {
   // Path (inside /public) to your downloadable CV. The resume PDF is copied to
   // public/resume.pdf so this just works.
   cvUrl: '/resume.pdf',
+  // Set this to match your LinkedIn "Open to work" status — it shows/hides the
+  // badge on the hero photo. (LinkedIn has no public API to read it live, so
+  // you toggle it here; in Sanity it's a checkbox in the Studio.)
+  openToWork: true,
 }
 
 // Social / professional links shown in the header area and footer.
@@ -69,9 +73,8 @@ export const experience = [
       'Building AI-enabled platforms and an Education ERP/LMS using React.js, ' +
       'Next.js, Redux and Python/FastAPI.',
     highlights: [
-      'Build ERP/LMS and AI-enabled platforms with React.js, Next.js, Redux and Tailwind CSS — from student registration and admissions to dashboards.',
-      'Contribute to backend integrations with Python/FastAPI, PostgreSQL and MongoDB for end-to-end application workflows.',
-      'Implement role-based access control, multi-tenant configs, reporting/Excel export and integrations like WhatsApp (Interakt) and Metabase analytics.',
+      'Build ERP/LMS and AI-enabled platforms with React.js, Next.js, Redux and Tailwind CSS.',
+      'Integrate Python/FastAPI, PostgreSQL and MongoDB with RBAC, multi-tenant configs and analytics.',
     ],
     tech: ['React.js', 'Next.js', 'Redux', 'Tailwind CSS', 'Python', 'FastAPI', 'PostgreSQL', 'MongoDB'],
   },
@@ -84,9 +87,8 @@ export const experience = [
       'Delivered hospitality and e-commerce web experiences for enterprise ' +
       'clients with React.js, Next.js, Material UI and CMS integrations.',
     highlights: [
-      'Built responsive, content-driven pages for IHCL — TajHotels.com and SSBeauty.in with React.js, Next.js, Material UI and Sanity.io/Strapi CMS.',
-      'Delivered hotel booking/modification/cancellation journeys and e-commerce PLP/PDP/cart flows via REST and Magento GraphQL APIs.',
-      'Improved image loading, rendering and Core Web Vitals; won the "Fantastic Frontier" award (2024) for frontend performance.',
+      'Built responsive, content-driven pages for IHCL (Taj & Gateway) and SSBeauty.in with React.js, Next.js, Material UI and CMS.',
+      'Delivered booking & e-commerce flows via REST/GraphQL; improved Core Web Vitals and won the "Fantastic Frontier" award (2024).',
     ],
     tech: ['React.js', 'Next.js', 'Material UI', 'MobX', 'Sanity.io', 'Strapi', 'GraphQL', 'REST APIs'],
   },
@@ -101,12 +103,12 @@ export const projects = [
   {
     slug: 'ai4ap',
     title: 'AI4AP',
-    tagline: 'AI-enabled application platform.',
-    banner: null,
+    tagline: 'AI-enabled secure platform for Andhra Pradesh Police.',
+    banner: '/projects/ai4ap.png',
     description:
-      'An AI-enabled application platform where I contributed to frontend ' +
-      'development and the integration of AI features into real application ' +
-      'workflows, with a focus on modular, maintainable architecture.',
+      'A secure, AI-enabled platform for the Andhra Pradesh Police. I contributed ' +
+      'to frontend development and the integration of AI features into real ' +
+      'application workflows, with a focus on modular, maintainable architecture.',
     features: [
       'Built frontend with React.js, Next.js, reusable components and state-management patterns.',
       'Integrated AI-enabled functionality with application workflows and backend APIs.',
@@ -114,15 +116,15 @@ export const projects = [
       'Collaborated on backend integrations and data workflows connecting UIs with functionality.',
     ],
     tech: ['React.js', 'Next.js', 'Redux', 'REST APIs', 'Micro-frontends'],
-    liveUrl: '',
+    liveUrl: 'https://ai.appolice.gov.in/login',
     sourceUrl: '',
     year: '2026',
   },
   {
     slug: 'education-erp-lms',
     title: 'Education ERP / LMS / Job Portal',
-    tagline: 'Education and student management platform.',
-    banner: null,
+    tagline: 'Path Saathi — skilling & student management platform.',
+    banner: '/projects/pathsaathi.png',
     description:
       'A multi-tenant education platform handling the full student lifecycle — ' +
       'registration, admissions, enrolment, course assignment and batch ' +
@@ -135,7 +137,7 @@ export const projects = [
       'Integrated WhatsApp messaging via Interakt and dashboards/analytics via Metabase; built LMS document and video workflows.',
     ],
     tech: ['React.js', 'Next.js', 'Redux', 'Tailwind CSS', 'FastAPI', 'PostgreSQL', 'MongoDB', 'Metabase'],
-    liveUrl: '',
+    liveUrl: 'https://midcerp.pathsaathi.com/login',
     sourceUrl: '',
     year: '2026',
   },
@@ -143,7 +145,7 @@ export const projects = [
     slug: 'tajhotels',
     title: 'IHCL — TajHotels.com',
     tagline: 'Hospitality and hotel booking platform.',
-    banner: null,
+    banner: '/projects/taj.png',
     description:
       'The flagship booking platform for IHCL (Taj Hotels). I built responsive, ' +
       'content-driven pages and contributed to the end-to-end booking journey ' +
@@ -156,7 +158,27 @@ export const projects = [
       'Improved image loading, rendering and Core Web Vitals for better performance.',
     ],
     tech: ['React.js', 'Next.js', 'Material UI', 'MobX', 'Sanity.io', 'REST APIs'],
-    liveUrl: 'https://www.tajhotels.com',
+    liveUrl: 'https://www.tajhotels.com/en-in',
+    sourceUrl: '',
+    year: '2022–2025',
+  },
+  {
+    slug: 'gateway-coorg',
+    title: 'IHCL — Gateway Hotels',
+    tagline: 'Hospitality and resort booking platform.',
+    banner: '/projects/gateway.png',
+    description:
+      "The booking platform for IHCL's Gateway Hotels & Resorts. I built " +
+      'responsive, content-driven pages and contributed to the resort booking ' +
+      'journey, reusing the component architecture shared across IHCL brands.',
+    features: [
+      'Developed responsive resort and destination pages with React.js, Next.js and Material UI.',
+      'Integrated Sanity.io CMS content for dynamic, content-managed experiences.',
+      'Contributed to booking, modification and cancellation flows via REST API integrations.',
+      'Shared reusable components across Taj and Gateway for a consistent IHCL experience.',
+    ],
+    tech: ['React.js', 'Next.js', 'Material UI', 'Sanity.io', 'REST APIs'],
+    liveUrl: 'https://www.gateway-hotels.com/en-in/hotels/gateway-coorg',
     sourceUrl: '',
     year: '2022–2025',
   },
@@ -164,7 +186,7 @@ export const projects = [
     slug: 'ssbeauty',
     title: 'SSBeauty.in',
     tagline: 'E-commerce beauty products platform.',
-    banner: null,
+    banner: '/projects/ssbeauty.png',
     description:
       'An e-commerce storefront for beauty products built on a headless stack. ' +
       'I developed reusable components and key shopping journeys powered by ' +

@@ -14,6 +14,7 @@ export default defineType({
     defineField({ name: 'email', type: 'string' }),
     defineField({ name: 'phone', type: 'string' }),
     defineField({ name: 'cvUrl', title: 'CV path or URL', type: 'string' }),
+    defineField({ name: 'openToWork', title: 'Open to work (show badge)', type: 'boolean', initialValue: true }),
     defineField({
       name: 'stats',
       type: 'array',

@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import { getProject, projects } from '@/data/portfolio'
 import { ArrowLeft, ExternalLink, Github } from '@/components/Icons'
 import Reveal from '@/components/Reveal'
+import BannerImage from '@/components/BannerImage'
 
 // Pre-render a static page for every project slug.
 export function generateStaticParams() {
@@ -37,11 +38,7 @@ export default async function ProjectDetail({ params }) {
           <div className="detail-grid">
             {/* LEFT — banner */}
             <Reveal className="detail-banner">
-              {project.banner ? (
-                <img src={project.banner} alt={project.title} />
-              ) : (
-                <span className="ph">{project.title}<br /><small style={{ fontWeight: 400, fontSize: '0.9rem', opacity: 0.85 }}>banner coming soon</small></span>
-              )}
+              <BannerImage src={project.banner} alt={project.title} />
             </Reveal>
 
             {/* RIGHT — content */}

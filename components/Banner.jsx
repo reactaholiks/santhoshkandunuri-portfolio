@@ -14,13 +14,15 @@ export default function Banner() {
               <div className="hero-photo">
                 <img src="/profile.jpg" alt={profile.name} />
               </div>
-              <div className="hero-float">
-                <span className="ico"><Sparkle width={20} height={20} /></span>
-                <span>
-                  <span className="t">Open to work</span><br />
-                  <span className="s">{profile.location}</span>
-                </span>
-              </div>
+              {profile.openToWork && (
+                <div className="hero-float">
+                  <span className="ico"><Sparkle width={20} height={20} /></span>
+                  <span>
+                    <span className="t">Open to work</span><br />
+                    <span className="s">{profile.location}</span>
+                  </span>
+                </div>
+              )}
             </div>
           </div>
 

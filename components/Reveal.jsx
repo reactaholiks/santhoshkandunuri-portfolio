@@ -3,8 +3,9 @@
 import { useEffect, useRef, useState } from 'react'
 
 // Wraps children and fades/slides them in when they scroll into view.
-// Usage: <Reveal delay={120}><Card/></Reveal>
-export default function Reveal({ children, delay = 0, as: Tag = 'div', className = '' }) {
+// `from` controls the entry direction: 'up' (default), 'left', 'right', 'down'.
+// Usage: <Reveal delay={120} from="left"><Card/></Reveal>
+export default function Reveal({ children, delay = 0, as: Tag = 'div', className = '', from = 'up' }) {
   const ref = useRef(null)
   const [visible, setVisible] = useState(false)
 
@@ -27,7 +28,7 @@ export default function Reveal({ children, delay = 0, as: Tag = 'div', className
   return (
     <Tag
       ref={ref}
-      className={`reveal ${visible ? 'in' : ''} ${className}`}
+      className={`reveal reveal-${from} ${visible ? 'in' : ''} ${className}`}
       style={{ transitionDelay: `${delay}ms` }}
     >
       {children}

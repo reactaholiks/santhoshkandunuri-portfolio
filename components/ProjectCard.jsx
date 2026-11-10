@@ -1,15 +1,12 @@
 import Link from 'next/link'
 import { ArrowRight } from './Icons'
+import BannerImage from './BannerImage'
 
 export default function ProjectCard({ project }) {
   return (
     <Link href={`/projects/${project.slug}`} className="card project-card">
       <div className="project-thumb" style={{ background: 'var(--gradient)' }}>
-        {project.banner ? (
-          <img src={project.banner} alt={project.title} loading="lazy" />
-        ) : (
-          <span className="ph">{project.title}</span>
-        )}
+        <BannerImage src={project.banner} alt={project.title} />
         {project.year && <span className="project-year">{project.year}</span>}
       </div>
       <div className="project-body">

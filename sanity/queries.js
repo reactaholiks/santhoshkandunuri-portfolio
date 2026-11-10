@@ -1,7 +1,7 @@
 import { groq } from 'next-sanity'
 
 export const profileQuery = groq`*[_type == "profile"][0]{
-  name, title, tagline, about, location, email, phone, cvUrl,
+  name, title, tagline, about, location, email, phone, cvUrl, openToWork,
   stats[]{value, label},
   skills,
   socials[]{label, url, icon}

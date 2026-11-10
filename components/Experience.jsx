@@ -22,7 +22,7 @@ export default function Experience() {
 
         <div className="timeline">
           {experience.map((job, i) => (
-            <Reveal key={job.company} delay={i * 100}>
+            <Reveal key={job.company} delay={i * 100} from={i % 2 === 0 ? 'left' : 'right'} className="reveal-slow">
               <article className="card exp-card">
                 <div className="exp-top">
                   <div className="exp-company">
