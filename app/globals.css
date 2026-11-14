@@ -51,6 +51,13 @@ input, textarea { font-family: inherit; }
    ========================================================================== */
 .container { width: 100%; max-width: var(--container); margin: 0 auto; padding: 0 24px; }
 
+/* Clip horizontal overflow from scroll-reveal transforms (slide-in-from-the-
+   side cards sit off-screen at translateX before they animate in). Without
+   this, those off-screen elements widen the page and create a right-side gap
+   on initial load that "fixes itself" after scrolling. `clip` (not `hidden`)
+   keeps the vertical axis a non-scroll-container, so sticky/scroll still work. */
+main { overflow-x: clip; }
+
 .section { padding: 92px 0; }
 
 .section-head { max-width: 640px; margin-bottom: 48px; }
