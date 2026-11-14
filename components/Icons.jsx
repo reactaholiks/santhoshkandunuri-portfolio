@@ -37,5 +37,8 @@ export const Sun = (p) => (
 export const Moon = (p) => (
   <svg {...base} {...p}><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" /></svg>
 )
+export const MessageCircle = (p) => (
+  <svg {...base} {...p}><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.38 8.38 0 0 1 4 11.5 8.5 8.5 0 0 1 12.5 3 8.38 8.38 0 0 1 21 11.5Z" /></svg>
+)
 
 export const iconByName = { github: Github, linkedin: Linkedin, mail: Mail }
