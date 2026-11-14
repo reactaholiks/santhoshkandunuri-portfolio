@@ -12,7 +12,7 @@ export default function Banner() {
           <div className="hero-media reveal in">
             <div className="hero-figure">
               <div className="hero-photo">
-                <img src="/profile.jpg" alt={profile.name} />
+                <img src="/profile.png" alt={profile.name} />
               </div>
               {profile.openToWork && (
                 <div className="hero-float">
